@@ -1,13 +1,53 @@
+spring:
+  profiles:
+    active: 
+    - dev
+    
+---
 server: 
-  port: 4001
+  port: 7001 #注册中心占用7001端口，冒号后面必须要有空格
 
+spring:
+  profiles: dev
+  application:
+    name: microservice-eureka-4001
+    
 eureka:
   instance:
-    hostname: eureka5001.com #eureka服务端的实例名称
-  client:
-    register-with-eureka: false #false表示不向注册中心注册自己。
-    fetch-registry: false #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
-    service-url:
-      defaultZone: http://eureka4002.com:4002/eureka/,http://eureka4003.com:4003/eureka/
-      
+    hostname: eureka4001.com #冒号后面必须要有空格
 
+---
+server: 
+  port: 4001 #注册中心占用7001端口，冒号后面必须要有空格
+
+spring:
+  profiles: dev
+  application:
+    name: microservice-eureka-4001
+    
+eureka:
+  instance:
+    hostname: eureka4001.com #冒号后面必须要有空格
+  client:
+    register-with-eureka: false #单签的Eureka-server自己不注册进服务列表中
+    fetch-registry: false #不通过Eureka获取注册信息
+    service-url:
+      defaultZone: http://eureka4001.com:4001/eureka/
+      
+---
+server: 
+  port: 4001 #注册中心占用7001端口，冒号后面必须要有空格
+
+spring:
+  profiles: test
+  application:
+    name: microservice-eureka-4001
+    
+eureka:
+  instance:
+    hostname: eureka4001.com #冒号后面必须要有空格
+  client:
+    register-with-eureka: false #单签的Eureka-server自己不注册进服务列表中
+    fetch-registry: false #不通过Eureka获取注册信息
+    service-url:
+      defaultZone: http://eureka4001.com:4001/eureka/
