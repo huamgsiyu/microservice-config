@@ -28,6 +28,8 @@ eureka:
     register-with-eureka: false
     service-url: 
       defaultZone: http://eureka4001.com:4001/eureka/,http://eureka4002.com:4002/eureka/,http://eureka4003.com:4003/eureka/
+  instance:
+    instance-id: prov-dept-8801.com
       
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
@@ -59,7 +61,9 @@ eureka:
     register-with-eureka: false
     service-url: 
       defaultZone: http://eureka4001.com:4001/eureka/,http://eureka4002.com:4002/eureka/,http://eureka4003.com:4003/eureka/
-
+  instance:
+    instance-id: prov-dept-8801.com
+    
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
   type-aliases-package: com.syh.springcloud.entities    # 所有Entity别名类所在包
@@ -90,7 +94,9 @@ eureka:
     register-with-eureka: false
     service-url: 
       defaultZone: http://eureka4001.com:4001/eureka/,http://eureka4002.com:4002/eureka/,http://eureka4003.com:4003/eureka/
-
+  instance:
+    instance-id: prov-dept-8801.com
+    
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
   type-aliases-package: com.syh.springcloud.entities    # 所有Entity别名类所在包
