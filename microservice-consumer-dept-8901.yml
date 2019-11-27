@@ -1,0 +1,30 @@
+spring: 
+  profiles: 
+    active:
+    - dev
+
+---
+spring: 
+  profiles: dev
+  
+  
+server: 
+  port: 8901
+  
+
+---
+spring: 
+  profiles: test
+
+
+server: 
+  port: 8911
+  
+  
+---
+spring: 
+  profiles: prov
+
+
+server: 
+  port: 8921
