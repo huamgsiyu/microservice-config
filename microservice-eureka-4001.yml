@@ -19,7 +19,7 @@ eureka:
     register-with-eureka: false #单签的Eureka-server自己不注册进服务列表中
     fetch-registry: false #不通过Eureka获取注册信息
     service-url:
-      defaultZone: http://eureka4002.com:4002/eureka/,http://eureka4003.com:4003/eureka/
+      defaultZone: http://eureka4001.com:4001/eureka/
       
 ---
 server: 
