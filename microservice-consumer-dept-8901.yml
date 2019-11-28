@@ -11,7 +11,10 @@ spring:
 server: 
   port: 8901
   
-
+eureka: 
+  register-with-eureka: false
+  service-uri: 
+    defaultZone: http://eureka4001.com:4001/eureka,http://eureka4002.com:4002/eureka,http://eureka4003.com:4003/eureka
 ---
 spring: 
   profiles: test
@@ -20,7 +23,10 @@ spring:
 server: 
   port: 8911
   
-  
+eureka: 
+  register-with-eureka: false
+  service-uri: 
+    defaultZone: http://eureka4001.com:4001/eureka,http://eureka4002.com:4002/eureka,http://eureka4003.com:4003/eureka
 ---
 spring: 
   profiles: prov
@@ -28,3 +34,8 @@ spring:
 
 server: 
   port: 8921
+  
+eureka: 
+  register-with-eureka: false
+  service-uri:
+    defaultZone: http://eureka4001.com:4001/eureka,http://eureka4002.com:4002/eureka,http://eureka4003.com:4003/eureka
