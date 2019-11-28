@@ -1,0 +1,61 @@
+spring: 
+  profiles: 
+    active:
+    - dev
+
+---
+spring: 
+  profiles: dev
+
+server: 
+  port: 6001
+ 
+spring: 
+  application:
+    name: microservice-gateway
+ 
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka4001.com:4001/eureka,http://eureka4002.com:4002/eureka,http://eureka4003.com:4003/eureka  
+  instance:
+    instance-id: gateway.com
+    prefer-ip-address: true 
+---
+spring: 
+  profiles: test
+
+server: 
+  port: 6011
+ 
+spring: 
+  application:
+    name: microservice-gateway
+ 
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka4001.com:4001/eureka,http://eureka4002.com:4002/eureka,http://eureka4003.com:4003/eureka  
+  instance:
+    instance-id: gateway.com
+    prefer-ip-address: true 
+
+---
+spring: 
+  profiles: prov
+
+server: 
+  port: 6021
+ 
+spring: 
+  application:
+    name: microservice-gateway
+ 
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka4001.com:4001/eureka,http://eureka4002.com:4002/eureka,http://eureka4003.com:4003/eureka  
+  instance:
+    instance-id: gateway.com
+    prefer-ip-address: true 
+
