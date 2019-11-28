@@ -1,13 +1,13 @@
 spring:
   profiles:
     active:
-      - dev
+    - dev
 
 ---
 spring:
   profiles: dev
   application:
-    name: microservice-prov-dept-8801
+    name: microservice-prov-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
@@ -40,7 +40,7 @@ mybatis:
 spring:
   profiles: test
   application:
-    name: microservice-prov-dept-8801
+    name: microservice-prov-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
@@ -71,7 +71,7 @@ mybatis:
 spring:
   profiles: prov
   application:
-    name: microservice-prov-dept-8801
+    name: microservice-prov-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
