@@ -6,14 +6,12 @@ spring:
 ---
 spring: 
   profiles: dev
+  application:
+    name: microservice-gateway
 
 server: 
   port: 6001
- 
-spring: 
-  application:
-    name: microservice-gateway
- 
+
 eureka: 
   client: 
     service-url: 
