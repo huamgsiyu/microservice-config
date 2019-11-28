@@ -14,7 +14,7 @@ server:
 eureka: 
   client: 
     register-with-eureka: false
-    service-uri: 
+    service-url: 
       defaultZone: http://eureka4001.com:4001/eureka/,http://eureka4002.com:4002/eureka/,http://eureka4003.com:4003/eureka/
 ---
 spring: 
@@ -27,7 +27,7 @@ server:
 eureka: 
   client: 
     register-with-eureka: false
-    service-uri: 
+    service-url: 
       defaultZone: http://eureka4001.com:4001/eureka/,http://eureka4002.com:4002/eureka/,http://eureka4003.com:4003/eureka/
 ---
 spring: 
@@ -40,5 +40,5 @@ server:
 eureka:
   client:   
     register-with-eureka: false
-    service-uri:
+    service-url:
       defaultZone: http://eureka4001.com:4001/eureka/,http://eureka4002.com:4002/eureka/,http://eureka4003.com:4003/eureka/
