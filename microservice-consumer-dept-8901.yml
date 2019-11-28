@@ -15,7 +15,7 @@ eureka:
   client: 
     register-with-eureka: false
     service-uri: 
-      defaultZone: http://eureka4001.com:4001/eureka,http://eureka4002.com:4002/eureka,http://eureka4003.com:4003/eureka
+      defaultZone: http://eureka4001.com:4001/eureka/,http://eureka4002.com:4002/eureka/,http://eureka4003.com:4003/eureka/
 ---
 spring: 
   profiles: test
@@ -28,7 +28,7 @@ eureka:
   client: 
     register-with-eureka: false
     service-uri: 
-      defaultZone: http://eureka4001.com:4001/eureka,http://eureka4002.com:4002/eureka,http://eureka4003.com:4003/eureka
+      defaultZone: http://eureka4001.com:4001/eureka/,http://eureka4002.com:4002/eureka/,http://eureka4003.com:4003/eureka/
 ---
 spring: 
   profiles: prov
@@ -41,4 +41,4 @@ eureka:
   client:   
     register-with-eureka: false
     service-uri:
-      defaultZone: http://eureka4001.com:4001/eureka,http://eureka4002.com:4002/eureka,http://eureka4003.com:4003/eureka
+      defaultZone: http://eureka4001.com:4001/eureka/,http://eureka4002.com:4002/eureka/,http://eureka4003.com:4003/eureka/
