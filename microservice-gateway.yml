@@ -22,13 +22,12 @@ eureka:
 ---
 spring: 
   profiles: test
+  application:
+    name: microservice-gateway
 
 server: 
   port: 6011
- 
-spring: 
-  application:
-    name: microservice-gateway
+
  
 eureka: 
   client: 
@@ -41,14 +40,12 @@ eureka:
 ---
 spring: 
   profiles: prov
+  application:
+    name: microservice-gateway
 
 server: 
   port: 6021
- 
-spring: 
-  application:
-    name: microservice-gateway
- 
+
 eureka: 
   client: 
     service-url: 
