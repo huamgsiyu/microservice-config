@@ -25,8 +25,8 @@ zuul:
   ignored-services: microservice-prov-dept #表示不能使用网关+服务名进行访问，只能使用路由地址
   #ignored-services: "*" #表示匹配所有的服务，都不能使用网关+服务名进行访问，只能使用路由地址
   routes: 
-    dept.serviceId: microservice-prov-dept
-    dept.path: /depts/** #表示把microservice-prov-dept服务映射成dept
+    depts.serviceId: microservice-prov-dept
+    depts.path: /depts/** #表示把microservice-prov-dept服务映射成dept
 ---
 spring: 
   profiles: test
@@ -50,8 +50,8 @@ zuul:
   #ignored-services: microservice-prov-dept #表示不能使用网关+服务名进行访问，只能使用路由地址
   ignored-services: "*" #表示匹配所有的服务，都不能使用网关+服务名进行访问，只能使用路由地址
   routes: 
-    dept.serviceId: microservice-prov-dept
-    dept.path: /depts/** #表示把microservice-prov-dept服务映射成dept
+    depts.serviceId: microservice-prov-dept
+    depts.path: /depts/** #表示把microservice-prov-dept服务映射成dept
 ---
 spring: 
   profiles: prov
@@ -74,5 +74,5 @@ zuul:
   ignored-services: microservice-prov-dept #表示不能使用网关+服务名进行访问，只能使用路由地址
   #ignored-services: "*" #表示匹配所有的服务，都不能使用网关+服务名进行访问，只能使用路由地址
   routes: 
-    dept.serviceId: microservice-prov-dept
-    dept.path: /depts/** #表示把microservice-prov-dept服务映射成dept
+    depts.serviceId: microservice-prov-dept
+    depts.path: /depts/** #表示把microservice-prov-dept服务映射成dept
